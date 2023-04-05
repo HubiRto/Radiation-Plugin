@@ -15,9 +15,11 @@ public class PotionFade implements Listener {
         if(!(event.getEntity() instanceof Player p)) return;
         if(!(event.getAction() == EntityPotionEffectEvent.Action.REMOVED)) return;
         if(event.getOldEffect() == null) return;
-        if(event.getOldEffect().getType() == PotionEffectType.WITHER) return;
+        if(event.getOldEffect().getType() == PotionEffectType.WITHER
+                || event.getOldEffect().getType() == PotionEffectType.HUNGER) return;
 
         if(!inRegion(p.getLocation())) return;
         p.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 2, true));
+        p.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 100, 2, true));
     }
 }
