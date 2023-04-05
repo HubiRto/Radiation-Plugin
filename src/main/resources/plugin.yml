@@ -1,7 +1,10 @@
-name: Radiation Plugin
+name: RadiationPlugin
 version: '${project.version}'
 main: pl.pomoku.radiationplugin.RadiationPlugin
 api-version: 1.19
 authors: [ HubiRto ]
 description: Plugin na radiacje
 website: pomoku.pl
+
+commands:
+  radiation:

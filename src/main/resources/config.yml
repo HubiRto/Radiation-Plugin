@@ -1,2 +1,8 @@
 # Size in blocks
-not-radiation-zone: 3000
+no-radiation-zone: 3000
+spawn:
+  x: 0
+  Y: 100
+  z: 0
+  world: "world"
+spawn_location:

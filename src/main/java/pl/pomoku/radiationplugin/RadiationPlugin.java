@@ -13,8 +13,10 @@ public final class RadiationPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+        saveDefaultConfig();
         loadListenersAndCommands();
     }
+
     private void loadListenersAndCommands() {
         String packageName = getClass().getPackage().getName();
         for (Class<?> clazz : new Reflections(packageName + ".listeners").getSubTypesOf(Listener.class)) {
